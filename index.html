@@ -200,6 +200,11 @@
       .hero-grid, .grid-3, .stats, .grid-2 { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 760px) {
+      .hero-photo {
+        width:min(100%, 260px);
+        margin-top:8px;
+      }
+
       .nav { flex-direction: column; align-items: flex-start; }
       .hero-grid, .grid-3, .stats, .grid-2 { grid-template-columns: 1fr; }
       .columns-2 { columns: 1; }
@@ -235,15 +240,20 @@
           <a class="btn btn-ghost" href="#projects">View project portfolio</a>
         </div>
       </div>
-      <aside class="panel">
-        <h3>At a glance</h3>
-        <ul class="compact-list">
-          <li>GxP audits, vendor audits, and audit readiness support.</li>
-          <li>CSV leadership for laboratory, manufacturing, and enterprise systems.</li>
-          <li>Technical writing for policies, SOPs, validation, and cybersecurity documentation.</li>
-          <li>Data integrity, ALCOA+, quality systems, CAPA, change control, and periodic review.</li>
-        </ul>
-      </aside>
+      <div class="hero-side">
+        <div class="hero-photo-wrap">
+          <img class="hero-photo" src="Kushal-Profile.jpg" alt="Kushal Vyas profile photo">
+        </div>
+        <aside class="panel">
+          <h3>At a glance</h3>
+          <ul class="compact-list">
+            <li>GxP audits, vendor audits, and audit readiness support.</li>
+            <li>CSV leadership for laboratory, manufacturing, and enterprise systems.</li>
+            <li>Technical writing for policies, SOPs, validation, and cybersecurity documentation.</li>
+            <li>Data integrity, ALCOA+, quality systems, CAPA, change control, and periodic review.</li>
+          </ul>
+        </aside>
+      </div>
     </div>
   </section>
 
@@ -258,8 +268,7 @@
         <div class="stat"><strong>Global</strong><span>Onsite experience across Europe, the US, India, APAC, and MENA</span></div>
         <div class="stat"><strong>ASQ</strong><span>CQA Certified Quality Auditor</span></div>
         <div class="stat"><strong>Audit</strong><span>USFDA, WHO, and Ukrainian GMP audit representation and support</span></div>
-      </div>
-    </div>
+</div>
   </section>
 
   <section id="services">
