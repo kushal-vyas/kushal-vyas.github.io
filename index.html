@@ -109,6 +109,8 @@
     }
     .btn-light { background: #fff; color: var(--brand); }
     .btn-ghost { background: rgba(255,255,255,.06); color: #fff; border-color: rgba(255,255,255,.22); }
+    button.btn { appearance: none; -webkit-appearance: none; background: rgba(255,255,255,.06); color: #fff; border: 1px solid rgba(255,255,255,.22); cursor: pointer; width: 100%; }
+    a.btn { text-decoration: none; }
     .panel {
       background: rgba(255,255,255,.08);
       border: 1px solid rgba(255,255,255,.14);
@@ -187,7 +189,41 @@
       column-gap: 24px;
     }
     .columns-2 li { break-inside: avoid; margin-bottom: 8px; }
-    .contact {
+    .enquiry-form {
+      display:grid;
+      gap:14px;
+      margin-top:18px;
+    }
+    .form-grid {
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+    }
+    .enquiry-form input,
+    .enquiry-form select,
+    .enquiry-form textarea {
+      width:100%;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.08);
+      color:#ffffff;
+      padding:14px 16px;
+      border-radius:14px;
+      font:inherit;
+      outline:none;
+    }
+    .enquiry-form input::placeholder,
+    .enquiry-form textarea::placeholder { color:rgba(255,255,255,.72); }
+    .enquiry-form select option { color:#17293f; }
+    .enquiry-form textarea {
+      min-height:140px;
+      resize:vertical;
+    }
+    .enquiry-note {
+      color:#d8e5f7;
+      font-size:.94rem;
+      margin-top:4px;
+    }
+.contact {
       background: linear-gradient(135deg, #102032, #183a61);
       color: #fff;
       border-radius: 22px;
@@ -200,6 +236,8 @@
       .hero-grid, .grid-3, .stats, .grid-2 { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 760px) {
+      .form-grid { grid-template-columns:1fr; }
+
       .hero-photo {
         width:min(100%, 260px);
         margin-top:8px;
@@ -621,15 +659,33 @@
       <div class="contact">
         <h2 style="margin-top:0;">Contact</h2>
         <p><strong>Availability:</strong> Available for consultation, freelance contract work, project-based support, and full-time discussions for suitable roles. Contact to discuss scope, timelines, or engagement options.</p>
-        <p>Available for GxP audit support, vendor audits, CSV consulting, technical writing, gap assessments, and regulated technology compliance work.</p>
+        <p>Available for GxP audit support, vendor audits, CSV consulting, technical writing, gap assessments, IT QA support, and regulated technology compliance work.</p>
         <p><strong>Email:</strong> <a href="mailto:vyas_kushal@hotmail.com">vyas_kushal@hotmail.com</a><br>
-        <strong>Phone:</strong> <a href="tel:+353899704265">+353 89970 4265</a><br>
         <strong>Location:</strong> Cork, Ireland<br>
         <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kushal-vyas-csv/" target="_blank" rel="noopener">linkedin.com/in/kushal-vyas-csv</a></p>
-        <div class="btn-row">
-          <a class="btn btn-ghost" href="mailto:vyas_kushal@hotmail.com?subject=Audit%20Support%20Request">Send enquiry</a>
-          <a class="btn btn-ghost" href="#top">Back to top</a>
-        </div>
+
+        <form class="enquiry-form" action="https://formspree.io/f/mreyowpy" method="POST">
+          <div class="form-grid">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="_replyto" placeholder="Your email" required>
+          </div>
+          <div class="form-grid">
+            <input type="text" name="company" placeholder="Company / organisation">
+            <select name="service">
+              <option value="">Select enquiry type</option>
+              <option>GxP Audit Support</option>
+              <option>CSV / CSA Support</option>
+              <option>Vendor Audit</option>
+              <option>IT QA Service</option>
+              <option>Technical Writing</option>
+              <option>AI / Automation for GxP</option>
+            </select>
+          </div>
+          <input type="hidden" name="_subject" value="New website enquiry from kushal-vyas.github.io">
+          <textarea name="message" placeholder="Tell me briefly about your requirement, timeline, and scope." required></textarea>
+          <button class="btn btn-ghost" type="submit">Send enquiry</button>
+        </form>
+                <a class="btn btn-ghost" href="#top" style="margin-top:18px; width:100%;">Back to top</a>
       </div>
     </div>
   </section>
