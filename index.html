@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kushal Vyas | GxP Audit, CSV & Compliance Specialist</title>
+  <meta name="description" content="Minimalistic professional website for Kushal Vyas covering GxP audits, CSV, life science compliance, technical writing, vendor audits, validation projects, and project portfolio." />
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --surface: #ffffff;
+      --ink: #122033;
+      --muted: #5e6b7a;
+      --line: #dbe2ea;
+      --brand: #163b65;
+      --brand-2: #0f766e;
+      --soft: #eef4fb;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(18,32,51,.08);
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(var(--max), calc(100% - 28px)); margin: 0 auto; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.9);
+      border-bottom: 1px solid rgba(219,226,234,.8);
+      backdrop-filter: blur(12px);
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 14px 0;
+    }
+    .brand {
+      font-weight: 800;
+      color: var(--brand);
+      letter-spacing: .2px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: .95rem;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0f1d31 0%, #163b65 60%, #20558d 100%);
+      color: #fff;
+      padding: 72px 0 56px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.45fr .9fr;
+      gap: 24px;
+      align-items: start;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.08);
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 16px;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.06;
+      letter-spacing: -.03em;
+    }
+    .hero p {
+      margin: 0 0 16px;
+      color: rgba(255,255,255,.9);
+      font-size: 1.03rem;
+      max-width: 760px;
+    }
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 160px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid transparent;
+    }
+    .btn-light { background: #fff; color: var(--brand); }
+    .btn-ghost { background: rgba(255,255,255,.06); color: #fff; border-color: rgba(255,255,255,.22); }
+    .panel {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .panel h3 { margin-top: 0; }
+    .compact-list { margin: 0; padding-left: 18px; }
+    .compact-list li { margin: 8px 0; color: rgba(255,255,255,.93); }
+    section { padding: 58px 0; }
+    .section-head { margin-bottom: 22px; max-width: 820px; }
+    .section-head h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.5rem, 3vw, 2.35rem);
+      color: var(--brand);
+      letter-spacing: -.02em;
+    }
+    .section-head p { margin: 0; color: var(--muted); }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .stat strong { display: block; font-size: 1.9rem; color: var(--brand); line-height: 1.1; margin-bottom: 4px; }
+    .grid-2, .grid-3 {
+      display: grid;
+      gap: 18px;
+    }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .card h3 { margin-top: 0; margin-bottom: 10px; color: var(--brand); }
+    .card p { margin: 0; color: var(--muted); }
+    .card ul { margin: 0; padding-left: 18px; }
+    .card li { margin-bottom: 9px; color: var(--muted); }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      padding: 8px 12px;
+      background: var(--soft);
+      border: 1px solid #d6e4f3;
+      border-radius: 999px;
+      font-size: .92rem;
+      color: var(--brand);
+      font-weight: 600;
+    }
+    .timeline { display: grid; gap: 14px; }
+    .item {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--brand);
+      border-radius: 0 16px 16px 0;
+      padding: 18px 18px 18px 20px;
+      box-shadow: var(--shadow);
+    }
+    .item h3 { margin: 0 0 5px; color: var(--brand); }
+    .meta { color: var(--brand-2); font-weight: 700; margin-bottom: 8px; }
+    .item ul { margin: 0; padding-left: 18px; }
+    .item li { margin-bottom: 8px; color: var(--muted); }
+    .columns-2 {
+      columns: 2;
+      column-gap: 24px;
+    }
+    .columns-2 li { break-inside: avoid; margin-bottom: 8px; }
+    .contact {
+      background: linear-gradient(135deg, #102032, #183a61);
+      color: #fff;
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+    .contact a { color: #d7e8ff; }
+    footer { padding: 18px 0 40px; color: var(--muted); font-size: .94rem; }
+    @media (max-width: 980px) {
+      .hero-grid, .grid-3, .stats, .grid-2 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 760px) {
+      .nav { flex-direction: column; align-items: flex-start; }
+      .hero-grid, .grid-3, .stats, .grid-2 { grid-template-columns: 1fr; }
+      .columns-2 { columns: 1; }
+      .btn { width: 100%; }
+      .btn-row { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar" id="top">
+    <div class="wrap nav">
+      <div class="brand">Kushal Vyas</div>
+      <nav class="nav-links">
+        <a href="#profile">Profile</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#audits">Audits</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">ASQ-CQA | GxP Audit | CSV | Life Science Compliance | IT QA</div>
+        <h1>Audit, CSV, validation, and compliance support for regulated life science teams.</h1>
+        <p>Kushal Vyas is an ASQ-Certified Quality Auditor with 12+ years of experience across GxP audits, computer system validation, technical writing, data integrity, quality systems, and vendor compliance in life sciences and technology environments.</p>
+        <p>His work covers laboratory systems, manufacturing systems, enterprise platforms, automation, infrastructure, and compliance documentation across Europe, the US, India, APAC, and MENA.</p>
+        <div class="btn-row">
+          <a class="btn btn-light" href="mailto:vyas_kushal@hotmail.com?subject=Audit%20and%20CSV%20Support">Email for enquiries</a>
+          <a class="btn btn-ghost" href="#projects">View project portfolio</a>
+        </div>
+      </div>
+      <aside class="panel">
+        <h3>At a glance</h3>
+        <ul class="compact-list">
+          <li>GxP audits, vendor audits, and audit readiness support.</li>
+          <li>CSV leadership for laboratory, manufacturing, and enterprise systems.</li>
+          <li>Technical writing for policies, SOPs, validation, and cybersecurity documentation.</li>
+          <li>Data integrity, ALCOA+, quality systems, CAPA, change control, and periodic review.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="profile">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Professional profile</h2>
+        <p>This page combines the latest CV profile and contact information with the older project-rich portfolio so the full experience is visible in one organized, minimalistic site.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>12+</strong><span>Years of experience</span></div>
+        <div class="stat"><strong>50+</strong><span>Global life science and technology companies supported</span></div>
+        <div class="stat"><strong>40+</strong><span>Audit, CSV, and compliance engagements</span></div>
+        <div class="stat"><strong>2022</strong><span>ASQ Certified Quality Auditor</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Services and expertise</h2>
+        <p>Core service areas have been grouped for clarity while preserving the full technical breadth shown across the CVs.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Audit services</h3>
+          <ul>
+            <li>GxP compliance audits, GMP, GLP, and GCP audits.</li>
+            <li>Third-party, vendor, and data centre audits.</li>
+            <li>CSV audit support during regulatory inspections.</li>
+            <li>Gap assessment, gap remediation support, and audit reporting.</li>
+            <li>ISO 9001:2015 audit support and QMS certification preparation.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>CSV and validation</h3>
+          <ul>
+            <li>Validation planning, review, execution, and lifecycle oversight.</li>
+            <li>Laboratory software validation and manufacturing systems validation.</li>
+            <li>Review of VMP, RAP, FRA, IQ, OQ, PQ, IOQ, URS, FS, DS, SRS, HLDS, and summary reports.</li>
+            <li>Periodic review, data migration review, change control, and decommissioning support.</li>
+            <li>Data evaluation and integration plans for laboratory and process systems.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Documentation and quality systems</h3>
+          <ul>
+            <li>SOPs, policies, work instructions, quality documents, and technical writing.</li>
+            <li>Cybersecurity and IT infrastructure policies aligned with NIST and COBIT.</li>
+            <li>CAPA support, KPI reporting, quality metrics, and compliance governance.</li>
+            <li>CSV, Data Integrity, and GAMP-5 training seminars.</li>
+            <li>Serialization documentation and equipment document development.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Systems covered</h2>
+        <p>Systems and platforms are grouped here so buyers can quickly see the depth of technical scope.</p>
+      </div>
+      <div class="chips">
+        <span class="chip">Laboratory equipment software</span>
+        <span class="chip">Laboratory IT infrastructure</span>
+        <span class="chip">LIMS</span>
+        <span class="chip">SAP / ERP</span>
+        <span class="chip">QMS / DMS</span>
+        <span class="chip">Data centers</span>
+        <span class="chip">Serialization systems</span>
+        <span class="chip">PLC / SCADA / HMI / DCS</span>
+        <span class="chip">MCC</span>
+        <span class="chip">BMS / EMS</span>
+        <span class="chip">Access control</span>
+        <span class="chip">Fire alarm systems</span>
+        <span class="chip">Server migration</span>
+        <span class="chip">Trackwise QMS</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Experience timeline</h2>
+        <p>Recent roles are shown first, followed by major delivery roles that built the project portfolio.</p>
+      </div>
+      <div class="timeline">
+        <div class="item">
+          <h3>Eli Lilly Kinsale Limited, Cork, Ireland</h3>
+          <div class="meta">CSV Lead | June 2023 to present</div>
+          <ul>
+            <li>Managing CSV for laboratory software and validation processes aligned with regulatory requirements.</li>
+            <li>Conducting IT data integrity assessments and preparing assessment reports.</li>
+            <li>Developing and reviewing validation plans, test scripts, and reports.</li>
+            <li>Maintaining audit readiness through current validation documentation and continuous improvement.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>Orion Innovation</h3>
+          <div class="meta">Lead Auditor / CSV SME | May 2021 to May 2023</div>
+          <ul>
+            <li>Conducted IT and GMP vendor audits for global technology vendors and pharmaceutical suppliers.</li>
+            <li>Scheduled and performed onsite and remote audits, then prepared reports and action items.</li>
+            <li>Supported Trackwise QMS transition and system qualifications for BMS, lab equipment, software, and manufacturing equipment.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>Kyowa Kirin North America</h3>
+          <div class="meta">Consultant, Lead Technical Writer | Jan 2022 to June 2023</div>
+          <ul>
+            <li>Created cybersecurity and IT infrastructure policies aligned with NIST and COBIT standards.</li>
+            <li>Partnered with technical teams to develop clear and actionable documentation.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>Celgene – BMS</h3>
+          <div class="meta">IT QA / Compliance SME | Jan 2018 to May 2021</div>
+          <ul>
+            <li>Oversaw computer system quality and compliance across the lifecycle.</li>
+            <li>Performed vendor audits, periodic reviews, and approvals for change requests, validation deliverables, data migration, DR plans, and retirement documents.</li>
+            <li>Supported deviation management, CAPA, KPI tracking, and datacentre retrospective validation.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>Sidmak Laboratories (India) Pvt Ltd</h3>
+          <div class="meta">Manager, Computer System Validation | Feb 2017 to Nov 2017</div>
+          <ul>
+            <li>Led validation and compliance for computerized systems installed at the Dehradun plant.</li>
+            <li>Managed CSV planning, review, periodic review, training, and data integration planning.</li>
+            <li>Served as Quality Management Representative during USFDA and WHO audits.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>Astellas Pharma via Accenture Technologies</h3>
+          <div class="meta">Compliance CAPA Program / SAP CSV | Dec 2016 to Feb 2017</div>
+          <ul>
+            <li>Managed SAP CSV project planning, resource planning, and compliance review for Europe-based implementation work.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>Anthem GxP Solutions Pvt. Ltd. (formerly Epitome Technologies)</h3>
+          <div class="meta">Asst. Manager Projects and CSV Auditor | Jan 2013 to Nov 2016</div>
+          <ul>
+            <li>Managed onsite CSV projects, audit work, project SOW support, service presentation, and negotiation.</li>
+            <li>Delivered validation projects covering PLC, EMS, BMS, MCC, lab equipment, access control, ERP, SAP, and serialization systems.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Project portfolio</h2>
+        <p>Project work is split into international and domestic delivery to keep a long track record readable.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>International projects</h3>
+          <ul>
+            <li>Square Pharmaceuticals, Dhaka, Bangladesh — PLC and laboratory equipment qualification, plus audit assessment.</li>
+            <li>Life Pharma FZE, Dubai, UAE — PLC qualification.</li>
+            <li>PHIL Inter Pharma, Ho Chi Minh City, Vietnam — CSV audit and gap assessment, PLC qualification, laboratory qualification, ERP qualification, and BMS qualification.</li>
+            <li>Oman Pharmaceuticals Products Co. LLC, Salalah, Oman — PLC qualification and project management.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Domestic and regional projects</h3>
+          <ul class="columns-2">
+            <li>Promed Exports (Sentiss Pharma), Baddi — PLC validation and BMS validation.</li>
+            <li>Claris Life Sciences, Ahmedabad — PLC validation across CL-1 to CL-5 and automation solution support.</li>
+            <li>Famycare, Ahmedabad — PLC revalidation.</li>
+            <li>VVC Pharma, Ratnagiri — PLC retrospective validation.</li>
+            <li>Agila Specialties / Mylan Group — MCC validation across SFF, HSF, SPD, BLD, and QLS plants.</li>
+            <li>Biological E, Hyderabad — PLC validation for 39 vaccine manufacturing machines.</li>
+            <li>Vimta Labs, Hyderabad — qualification of access control, fire alarm, and BMS.</li>
+            <li>Indoco Remedies, Goa — ERP qualification.</li>
+            <li>Indoco Remedies, Mumbai — server migration qualification.</li>
+            <li>Kopran Limited, Khopoli — SAP B1 validation.</li>
+            <li>Aurobindo Pharma, Hyderabad — QMS software validation.</li>
+            <li>Alembic Pharmaceuticals, Vadodara — PLC, lab equipment, and SAP validation with troubleshooting.</li>
+            <li>Wallace Pharmaceuticals, Nalagarh — international audit support.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="audits">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Audit footprint</h2>
+        <p>This section groups onsite manufacturing audits, remote IT vendor audits, and regulatory support work.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Onsite manufacturing audits</h3>
+          <ul>
+            <li>Macleods Pharmaceuticals Ltd, Daman.</li>
+            <li>Unimark Remedies Ltd, Ahmedabad.</li>
+            <li>Dr. Reddy’s Laboratories Ltd, Hyderabad, FTO-3 Plant.</li>
+            <li>Sidmak Labs, Dehradun and Valsad.</li>
+            <li>Vimta Labs, Hyderabad.</li>
+            <li>Sentiss Pharma, Baddi.</li>
+            <li>Indoco Remedies, Goa.</li>
+            <li>Claris Life Sciences, Ahmedabad.</li>
+            <li>Life Pharma FZE, Dubai.</li>
+            <li>Square Pharmaceuticals, Dhaka.</li>
+            <li>PHIL Inter Pharma, Ho Chi Minh City.</li>
+            <li>Oxalis Labs, Baddi.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Remote IT vendor audits</h3>
+          <ul>
+            <li>Veeva Systems</li>
+            <li>Honeywell</li>
+            <li>Microsoft SharePoint</li>
+            <li>Microsoft GitHub</li>
+            <li>ServiceNow</li>
+            <li>Google Apigee</li>
+            <li>ValGenesis</li>
+            <li>Siemens Automation</li>
+            <li>Biovia</li>
+            <li>Rockwell Automation</li>
+            <li>Benchling</li>
+            <li>Signant Health</li>
+            <li>Kneat Solutions</li>
+            <li>Loftware</li>
+            <li>Dassault Systemes</li>
+            <li>Celgene-BMS Data Center Audit and Gap Assessment</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Regulatory and audit support</h3>
+          <ul>
+            <li>USFDA audit support at Sidmak Labs, Dehradun.</li>
+            <li>WHO audit support at Sidmak Labs, Dehradun.</li>
+            <li>Ukrainian GMP audit support at Wallace Pharma, Nalagarh.</li>
+            <li>Training delivery in GxP audit preparation, CSV, Data Integrity, and GAMP-5.</li>
+            <li>Independent consulting support for ISO 9001:2015 QMS certification readiness.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid-2">
+      <div class="card">
+        <h3>Standards and frameworks</h3>
+        <div class="chips">
+          <span class="chip">21 CFR Part 11</span>
+          <span class="chip">21 CFR Parts 210, 211, 212, 58</span>
+          <span class="chip">GAMP 5</span>
+          <span class="chip">EU GMP Annex 11</span>
+          <span class="chip">ICH E6</span>
+          <span class="chip">ICH Q9</span>
+          <span class="chip">NIST</span>
+          <span class="chip">COBIT</span>
+          <span class="chip">ALCOA+</span>
+          <span class="chip">ISO 9001</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Certifications and education</h3>
+        <ul>
+          <li>ASQ Certified Quality Auditor — Feb 2022.</li>
+          <li>Certified Industrial Automation Engineer, PLC / SCADA / HMI / DCS — Dec 2012.</li>
+          <li>CCNA Academic Certified — Dec 2011.</li>
+          <li>ISCA CISA — ongoing.</li>
+          <li>B.Tech in Electronics and Communication Engineering — Rajasthan Technical University, Kota.</li>
+          <li>Diploma in Electronics and Communication Engineering — Technical Education Board, Gandhinagar.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid-2">
+      <div class="card">
+        <h3>Technical skills</h3>
+        <ul>
+          <li>Allen Bradley PLC, Micrologix, SLC 500/03, RS Logix 500.</li>
+          <li>Siemens PLC S7-300 and Simatic Manager / Step7.</li>
+          <li>SCADA: Wonderware InTouch and Siemens WinCC.</li>
+          <li>Computer networking foundation with CCNA academic certification.</li>
+          <li>Document lifecycle approach for life science industries.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Additional profile details</h3>
+        <ul>
+          <li>Resident location: Cork, Ireland.</li>
+          <li>Earlier profile lists hometown as Ahmedabad, Gujarat, India.</li>
+          <li>Languages: English, Gujarati, and Hindi.</li>
+          <li>References available upon request.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <h2 style="margin-top:0;">Contact</h2>
+        <p>Available for GxP audit support, vendor audits, CSV consulting, technical writing, gap assessments, and regulated technology compliance work.</p>
+        <p><strong>Email:</strong> <a href="mailto:vyas_kushal@hotmail.com">vyas_kushal@hotmail.com</a><br>
+        <strong>Phone:</strong> <a href="tel:+353899704265">+353 89970 4265</a><br>
+        <strong>Location:</strong> Cork, Ireland<br>
+        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kushal-vyas-csv/" target="_blank" rel="noopener">linkedin.com/in/kushal-vyas-csv</a></p>
+        <div class="btn-row">
+          <a class="btn btn-light" href="mailto:vyas_kushal@hotmail.com?subject=Audit%20Support%20Request">Send enquiry</a>
+          <a class="btn btn-ghost" href="#top">Back to top</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">© 2026 Kushal Vyas. Built as a full professional profile site for audit, CSV, and compliance services.</div>
+  </footer>
+</body>
+</html>
