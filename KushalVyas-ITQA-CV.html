@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kushal Vyas — IT QA CV</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; font-size: 10.5pt; color: #1a1a1a; background: #fff; }
+.page { max-width: 780px; margin: 0 auto; padding: 36px 44px; }
+
+/* Header */
+.cv-header { background: #0B1F3A; color: #fff; padding: 28px 44px 22px; display: flex; justify-content: space-between; align-items: flex-end; }
+.cv-header-left h1 { font-size: 26pt; font-weight: normal; letter-spacing: 0.02em; color: #fff; }
+.cv-header-left h2 { font-size: 10pt; color: #C9A84C; font-style: italic; font-weight: normal; margin-top: 4px; letter-spacing: 0.04em; }
+.cv-header-right { text-align: right; font-size: 9pt; color: #c8d4e0; line-height: 1.7; }
+.cv-header-right a { color: #C9A84C; text-decoration: none; }
+
+/* CV type badge */
+.cv-type-badge { background: #C9A84C; color: #0B1F3A; font-size: 8pt; font-weight: bold; padding: 3px 10px; border-radius: 2px; display: inline-block; margin-top: 8px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Sections */
+.section { margin: 22px 0; }
+.section-title { font-size: 9pt; font-weight: bold; letter-spacing: 0.12em; text-transform: uppercase; color: #C9A84C; border-bottom: 1.5px solid #C9A84C; padding-bottom: 4px; margin-bottom: 12px; }
+
+/* Profile summary */
+.profile-box { background: #f8f6f1; border-left: 3px solid #C9A84C; padding: 14px 16px; font-size: 10pt; line-height: 1.65; color: #1a1a1a; font-style: italic; }
+
+/* Competencies grid */
+.comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; margin-top: 8px; }
+.comp-item { font-size: 9.5pt; padding: 4px 0 4px 12px; border-left: 2px solid #C9A84C; line-height: 1.4; }
+.comp-item strong { color: #0B1F3A; }
+
+/* Experience block */
+.job { margin-bottom: 18px; }
+.job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+.job-title { font-size: 11pt; font-weight: bold; color: #0B1F3A; }
+.job-date { font-size: 9pt; color: #666; white-space: nowrap; margin-left: 12px; }
+.job-company { font-size: 10pt; color: #C9A84C; font-weight: bold; margin-bottom: 6px; }
+.job ul { padding-left: 16px; }
+.job li { font-size: 9.5pt; line-height: 1.6; margin-bottom: 2px; }
+
+/* Audit tables */
+.audit-category { margin-bottom: 14px; }
+.audit-category h4 { font-size: 9.5pt; font-weight: bold; color: #0B1F3A; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.05em; }
+.audit-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 16px; }
+.audit-list li { font-size: 9pt; line-height: 1.55; list-style: none; padding-left: 10px; position: relative; }
+.audit-list li::before { content: '—'; position: absolute; left: 0; color: #C9A84C; }
+
+/* IT vendor list */
+.vendor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 16px; }
+.vendor-grid li { font-size: 9pt; list-style: none; padding-left: 10px; position: relative; line-height: 1.6; }
+.vendor-grid li::before { content: '→'; position: absolute; left: 0; color: #C9A84C; font-size: 8pt; }
+
+/* Skills tags */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.tag { background: #0B1F3A; color: #C9A84C; font-size: 8pt; padding: 3px 9px; border-radius: 2px; letter-spacing: 0.04em; }
+
+/* Edu / cert table */
+.edu-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #eee; font-size: 9.5pt; }
+.edu-row:last-child { border-bottom: none; }
+.edu-left { color: #1a1a1a; }
+.edu-right { color: #666; font-size: 9pt; }
+
+/* Divider */
+.divider { border: none; border-top: 1px solid #e8e0d0; margin: 14px 0; }
+
+/* Two column layout */
+.two-col { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+.sidebar .section-title { font-size: 8.5pt; }
+
+/* Footer */
+.cv-footer { margin-top: 28px; padding-top: 10px; border-top: 1px solid #e8e0d0; font-size: 8pt; color: #999; text-align: center; }
+
+@media print {
+  body { font-size: 10pt; }
+  .page { padding: 0; max-width: 100%; }
+  .cv-header { padding: 22px 30px 18px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cv-header">
+  <div class="cv-header-left">
+    <h1>Kushal Vyas</h1>
+    <h2>ASQ-CQA | GxP Audit &amp; CSV Specialist | Life Science Compliance</h2>
+    <span class="cv-type-badge">IT QA CV — Vendor Compliance &amp; Regulated Technology</span>
+  </div>
+  <div class="cv-header-right">
+    Cork, Ireland<br>
+    +353 89970 4265<br>
+    <a href="mailto:vyas_kushal@hotmail.com">vyas_kushal@hotmail.com</a><br>
+    <a href="https://linkedin.com/in/kushal-vyas-csv">linkedin.com/in/kushal-vyas-csv</a><br>
+    <a href="https://kushal-vyas.github.io">kushal-vyas.github.io</a>
+    
+  </div>
+</div>
+
+<div class="page">
+
+<div class="section">
+  <div class="section-title">IT QA Profile</div>
+  <div class="profile-box">
+    IT QA and Life Science Compliance specialist with 13+ years overseeing regulated technology systems across the pharmaceutical and biotech industry. Deep experience in GxP vendor auditing, data integrity programme management, SDLC oversight, change control, and IT infrastructure compliance. Operated as IT QA SME within Celgene–BMS IT department (via Accenture), delivering compliance across a global portfolio of validated computer systems. Currently supporting CSV and data integrity at Eli Lilly Kinsale. Familiar with Veeva, ServiceNow, SAP, LIMS, ERP, BMS, SCADA, and cloud/SaaS platforms in regulated environments.
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">IT QA Competencies</div>
+  <div class="comp-grid">
+    <div class="comp-item"><strong>GxP Vendor Auditing:</strong> ERP, QMS, MES, LIMS, SCADA, cloud, SaaS platforms</div>
+    <div class="comp-item"><strong>SDLC Oversight:</strong> GxP system lifecycle — commissioning to retirement</div>
+    <div class="comp-item"><strong>Data Integrity:</strong> Pre-purchase assessments, ALCOA+, audit trail compliance</div>
+    <div class="comp-item"><strong>Change Control:</strong> GxP CR review and approval, impact assessment</div>
+    <div class="comp-item"><strong>Periodic Reviews:</strong> System compliance reviews, documentation currency</div>
+    <div class="comp-item"><strong>Cybersecurity Policy:</strong> NIST CSF, COBIT — IT infrastructure documentation</div>
+    <div class="comp-item"><strong>Disaster Recovery:</strong> DR plan review and approval, decommissioning memos</div>
+    <div class="comp-item"><strong>KPI &amp; Metrics:</strong> Management reporting, compliance dashboards</div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">IT GxP Vendor Audit Record</div>
+  <p style="font-size:9.5pt;margin-bottom:8px;">Conducted comprehensive remote IT GxP audits for the following regulated technology providers — covering SDLC, data integrity, infrastructure controls, audit trail integrity, and regulatory compliance posture:</p>
+  <ul class="vendor-grid">
+    <li>Veeva Systems Inc. (Mar 2023)</li>
+    <li>Honeywell (Feb 2023)</li>
+    <li>Signant Health (Feb 2023)</li>
+    <li>Kneat Solutions (Oct 2022)</li>
+    <li>Loftware Inc. (Aug 2022)</li>
+    <li>Biovia (Jan 2022)</li>
+    <li>Google Apigee (Dec 2021)</li>
+    <li>ValGenesis (Nov 2021)</li>
+    <li>Siemens Automation (Dec 2021)</li>
+    <li>Rockwell Automation (Dec 2021)</li>
+    <li>Benchling (Dec 2021)</li>
+    <li>Dassault Systèmes (Dec 2021)</li>
+    <li>ServiceNow (Nov–Dec 2019)</li>
+    <li>Microsoft SharePoint (Sep 2019)</li>
+    <li>Microsoft GitHub (Sep 2019)</li>
+  </ul>
+  <p style="font-size:9pt;margin-top:8px;color:#555;"><strong>Data Centre:</strong> Celgene–BMS Data Centre Audit &amp; Gap Assessment (Mar 2021)</p>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">Professional Experience — IT QA Focus</div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">Freelance Senior Consultant — CSV Lead</span><span class="job-date">June 2023 – Present</span></div>
+    <div class="job-company">Eli Lilly Kinsale Limited, Cork, Ireland</div>
+    <ul>
+      <li>Manage IT Data Integrity assessment programme — pre-purchase evaluations for regulated laboratory software.</li>
+      <li>Oversee CSV lifecycle for laboratory systems; ensure alignment with 21 CFR Part 11, Annex 11, and CSA guidance.</li>
+      <li>Develop validation plans, test scripts, and summary reports; maintain documentation for audit readiness.</li>
+      <li>Collaborate across IT, QA, and regulatory teams to align compliance activities with procurement and deployment pipelines.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">Lead Auditor / GxP Vendor Audit SME</span><span class="job-date">May 2021 – Sep 2024</span></div>
+    <div class="job-company">Orion Innovation (supporting major US pharmaceutical client)</div>
+    <ul>
+      <li>Led IT GxP vendor audit programme for 15+ global regulated technology providers — scheduling, conducting, reporting, and CAPA tracking.</li>
+      <li>Developed cybersecurity and IT infrastructure policies compliant with NIST and COBIT standards (KKNA engagement).</li>
+      <li>Managed Trackwise QMS system transition including validation planning, execution, and deployment support.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">IT QA / Compliance SME (Lead Specialist)</span><span class="job-date">Jan 2018 – Apr 2021</span></div>
+    <div class="job-company">Accenture / Celgene–BMS (Bristol-Myers Squibb), USA</div>
+    <ul>
+      <li>Embedded IT QA SME within BMS IT QA department — overseeing global portfolio of validated computer systems.</li>
+      <li>Provided regulatory decisions on whether to validate systems (GxP classification); completed CMDB compliance records.</li>
+      <li>Final reviewer and approver of all validation plans, summary reports, requirements documents, and data migration plans.</li>
+      <li>Reviewed and approved all DR Plans, System Retirement Plans, decommissioning memos, IT Policies, SOPs.</li>
+      <li>Managed GxP Change Request process — ensuring all system changes were implemented under controlled conditions.</li>
+      <li>Led failure investigations and CAPA implementation; tracked KPIs for monthly management meetings.</li>
+      <li>Conducted vendor assessments; performed periodic reviews of SDLC documentation.</li>
+      <li>Served as technical writer for Data Centre retrospective validation.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">Manager — CSV &amp; Life Science Compliance</span><span class="job-date">Feb 2017 – Nov 2017</span></div>
+    <div class="job-company">Sidmak Laboratories (India) Pvt. Ltd.</div>
+    <ul>
+      <li>Managed full IT compliance programme including validation, change control, and system oversight.</li>
+      <li>Prepared and maintained USFDA- and WHO-ready validation documentation — both inspections achieved clean outcomes.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">Senior Analyst — Regulatory Compliance &amp; CSV</span><span class="job-date">Nov 2016 – Feb 2017</span></div>
+    <div class="job-company">Accenture / Astellas Pharma (SAP Implementation, Europe)</div>
+    <ul>
+      <li>Managed CSV for SAP implementation across European pharmaceutical sites; reviewed all compliance documentation.</li>
+      <li>Managed CAPA programme for compliance findings identified during SAP rollout.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">Life Science Compliance &amp; CSV Consultant</span><span class="job-date">Jan 2013 – Nov 2016</span></div>
+    <div class="job-company">Anthem GxP Solutions Pvt. Ltd.</div>
+    <ul>
+      <li>Delivered IT compliance and qualification projects for regulated systems including ERP, QMS, BMS, SCADA, and serialisation.</li>
+      <li>Delivered training seminars on GxP, CSV, Data Integrity, and GAMP-5 across multiple client organisations.</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">Regulated Systems Experience</div>
+  <div class="tags">
+    <span class="tag">Veeva Vault</span><span class="tag">ServiceNow</span><span class="tag">TrackWise QMS</span>
+    <span class="tag">SAP ERP</span><span class="tag">LIMS</span><span class="tag">MES</span>
+    <span class="tag">PLC/SCADA/HMI</span><span class="tag">BMS/EMS</span><span class="tag">Serialisation</span>
+    <span class="tag">SharePoint</span><span class="tag">GitHub (GxP)</span><span class="tag">Benchling</span>
+    <span class="tag">ValGenesis</span><span class="tag">Kneat</span><span class="tag">Rockwell</span>
+    <span class="tag">Siemens</span><span class="tag">Biovia</span><span class="tag">Cloud SaaS (GxP)</span>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">Certifications &amp; Education</div>
+  <div class="two-col">
+    <div>
+      <div class="edu-row"><span class="edu-left"><strong>ASQ Certified Quality Auditor (CQA)</strong></span><span class="edu-right">Feb 2022</span></div>
+      <div class="edu-row"><span class="edu-left">Certified Industrial Automation Engineer</span><span class="edu-right">Dec 2012</span></div>
+      <div class="edu-row"><span class="edu-left">CCNA — Computer Networking (Academic)</span><span class="edu-right">Dec 2011</span></div>
+      <div class="edu-row"><span class="edu-left">ISCA CISA</span><span class="edu-right">In Progress</span></div>
+      <div class="edu-row"><span class="edu-left">B.Tech — Electronics &amp; Communication Engineering</span><span class="edu-right">Rajasthan Technical University</span></div>
+    </div>
+    <div>
+      <div class="tags">
+        <span class="tag">GAMP 5</span><span class="tag">21 CFR Part 11</span><span class="tag">Annex 11</span>
+        <span class="tag">ALCOA+</span><span class="tag">NIST CSF</span><span class="tag">COBIT</span>
+        <span class="tag">ICH Q9</span><span class="tag">CSA Guidance</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cv-footer">Kushal Vyas &nbsp;|&nbsp; Cork, Ireland &nbsp;|&nbsp; vyas_kushal@hotmail.com &nbsp;|&nbsp; References available upon request</div>
+</div>
+</body>
+</html>

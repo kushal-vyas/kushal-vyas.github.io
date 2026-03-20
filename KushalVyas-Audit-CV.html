@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kushal Vyas — Audit CV</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; font-size: 10.5pt; color: #1a1a1a; background: #fff; }
+.page { max-width: 780px; margin: 0 auto; padding: 36px 44px; }
+
+/* Header */
+.cv-header { background: #0B1F3A; color: #fff; padding: 28px 44px 22px; display: flex; justify-content: space-between; align-items: flex-end; }
+.cv-header-left h1 { font-size: 26pt; font-weight: normal; letter-spacing: 0.02em; color: #fff; }
+.cv-header-left h2 { font-size: 10pt; color: #C9A84C; font-style: italic; font-weight: normal; margin-top: 4px; letter-spacing: 0.04em; }
+.cv-header-right { text-align: right; font-size: 9pt; color: #c8d4e0; line-height: 1.7; }
+.cv-header-right a { color: #C9A84C; text-decoration: none; }
+
+/* CV type badge */
+.cv-type-badge { background: #C9A84C; color: #0B1F3A; font-size: 8pt; font-weight: bold; padding: 3px 10px; border-radius: 2px; display: inline-block; margin-top: 8px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Sections */
+.section { margin: 22px 0; }
+.section-title { font-size: 9pt; font-weight: bold; letter-spacing: 0.12em; text-transform: uppercase; color: #C9A84C; border-bottom: 1.5px solid #C9A84C; padding-bottom: 4px; margin-bottom: 12px; }
+
+/* Profile summary */
+.profile-box { background: #f8f6f1; border-left: 3px solid #C9A84C; padding: 14px 16px; font-size: 10pt; line-height: 1.65; color: #1a1a1a; font-style: italic; }
+
+/* Competencies grid */
+.comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; margin-top: 8px; }
+.comp-item { font-size: 9.5pt; padding: 4px 0 4px 12px; border-left: 2px solid #C9A84C; line-height: 1.4; }
+.comp-item strong { color: #0B1F3A; }
+
+/* Experience block */
+.job { margin-bottom: 18px; }
+.job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+.job-title { font-size: 11pt; font-weight: bold; color: #0B1F3A; }
+.job-date { font-size: 9pt; color: #666; white-space: nowrap; margin-left: 12px; }
+.job-company { font-size: 10pt; color: #C9A84C; font-weight: bold; margin-bottom: 6px; }
+.job ul { padding-left: 16px; }
+.job li { font-size: 9.5pt; line-height: 1.6; margin-bottom: 2px; }
+
+/* Audit tables */
+.audit-category { margin-bottom: 14px; }
+.audit-category h4 { font-size: 9.5pt; font-weight: bold; color: #0B1F3A; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.05em; }
+.audit-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 16px; }
+.audit-list li { font-size: 9pt; line-height: 1.55; list-style: none; padding-left: 10px; position: relative; }
+.audit-list li::before { content: '—'; position: absolute; left: 0; color: #C9A84C; }
+
+/* IT vendor list */
+.vendor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 16px; }
+.vendor-grid li { font-size: 9pt; list-style: none; padding-left: 10px; position: relative; line-height: 1.6; }
+.vendor-grid li::before { content: '→'; position: absolute; left: 0; color: #C9A84C; font-size: 8pt; }
+
+/* Skills tags */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.tag { background: #0B1F3A; color: #C9A84C; font-size: 8pt; padding: 3px 9px; border-radius: 2px; letter-spacing: 0.04em; }
+
+/* Edu / cert table */
+.edu-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #eee; font-size: 9.5pt; }
+.edu-row:last-child { border-bottom: none; }
+.edu-left { color: #1a1a1a; }
+.edu-right { color: #666; font-size: 9pt; }
+
+/* Divider */
+.divider { border: none; border-top: 1px solid #e8e0d0; margin: 14px 0; }
+
+/* Two column layout */
+.two-col { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+.sidebar .section-title { font-size: 8.5pt; }
+
+/* Footer */
+.cv-footer { margin-top: 28px; padding-top: 10px; border-top: 1px solid #e8e0d0; font-size: 8pt; color: #999; text-align: center; }
+
+@media print {
+  body { font-size: 10pt; }
+  .page { padding: 0; max-width: 100%; }
+  .cv-header { padding: 22px 30px 18px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cv-header">
+  <div class="cv-header-left">
+    <h1>Kushal Vyas</h1>
+    <h2>ASQ-CQA | GxP Audit &amp; CSV Specialist | Life Science Compliance</h2>
+    <span class="cv-type-badge">Audit CV — GxP &amp; Compliance Audits</span>
+  </div>
+  <div class="cv-header-right">
+    Cork, Ireland<br>
+    +353 89970 4265<br>
+    <a href="mailto:vyas_kushal@hotmail.com">vyas_kushal@hotmail.com</a><br>
+    <a href="https://linkedin.com/in/kushal-vyas-csv">linkedin.com/in/kushal-vyas-csv</a><br>
+    <a href="https://kushal-vyas.github.io">kushal-vyas.github.io</a>
+    
+  </div>
+</div>
+
+<div class="page">
+
+<div class="section">
+  <div class="section-title">Audit Profile</div>
+  <div class="profile-box">
+    ASQ-Certified Quality Auditor with 13+ years leading independent GxP audits across manufacturing sites, IT vendors, and data centres. Delivered 30+ onsite manufacturing audits across API, injectable, formulation, and R&D facilities globally. Conducted 15+ remote IT GxP vendor audits for regulated technology platforms. Represented company management during USFDA, WHO, and Ukrainian GMP inspections — all with clean outcomes. Technology-focused with deep understanding of data integrity, regulated IT, and infrastructure compliance.
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Audit Competencies</div>
+  <div class="comp-grid">
+    <div class="comp-item"><strong>GMP/GLP/GCP Audits:</strong> API, formulation, injectable, R&D, BE facilities</div>
+    <div class="comp-item"><strong>IT GxP Vendor Audits:</strong> ERP, QMS, MES, LIMS, cloud, automation platforms</div>
+    <div class="comp-item"><strong>Regulatory Inspection Support:</strong> USFDA, WHO, EU GMP, Ukrainian GMP</div>
+    <div class="comp-item"><strong>Data Centre Qualification:</strong> Retrospective audits, gap analysis</div>
+    <div class="comp-item"><strong>Data Integrity Audits:</strong> ALCOA+, audit trail reviews, system assessments</div>
+    <div class="comp-item"><strong>ISO 9001:2015:</strong> QMS audit and certification support</div>
+    <div class="comp-item"><strong>Audit Reporting:</strong> Risk-ranked findings, CAPA planning, management summaries</div>
+    <div class="comp-item"><strong>Gap Assessments:</strong> Pre-inspection, supplier qualification, mock inspections</div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">Lead Auditor — GxP Compliance &amp; Life Science Audits</div>
+
+  <div class="audit-category">
+    <h4>API Manufacturing Sites (Onsite)</h4>
+    <ul class="audit-list">
+      <li>Macleods Pharmaceuticals Ltd, Daman, India — GMP/GLP (Aug 2015, Jun 2015)</li>
+      <li>Unimark Remedies Ltd, Ahmedabad, India — GMP/GLP (Oct 2016)</li>
+      <li>Dr. Reddy's Laboratories Ltd, Hyderabad FTO-3 — GMP/GLP (Sep 2016)</li>
+      <li>Sidmak Labs, Dehradun, India — GMP/GLP (Mar 2016)</li>
+    </ul>
+  </div>
+
+  <div class="audit-category">
+    <h4>Injectable &amp; Parenteral Manufacturing (Onsite)</h4>
+    <ul class="audit-list">
+      <li>Claris Life Sciences Ltd, Ahmedabad (Plants CL-1 to CL-5) — GMP/GLP (May 2014)</li>
+      <li>Sentiss Pharma, Baddi, India — GMP/GLP (Apr 2016)</li>
+      <li>Indoco Remedies Limited, Goa, India — GMP/GLP (Apr 2016)</li>
+    </ul>
+  </div>
+
+  <div class="audit-category">
+    <h4>Formulation Plants (Onsite)</h4>
+    <ul class="audit-list">
+      <li>Life Pharma FZE, Dubai, UAE — GMP/GLP (Mar 2015)</li>
+      <li>Square Pharmaceuticals, Dhaka, Bangladesh — GMP/GLP (Dec 2014)</li>
+      <li>PHIL Inter Pharma, Ho Chi Minh City, Vietnam — GMP/GLP (Aug 2015)</li>
+      <li>Macleods Pharmaceuticals Ltd, N2 Plant, Baddi — GMP/GLP (Jun 2014)</li>
+      <li>Oxalis Labs, Baddi, India — GMP/GLP (Aug 2014)</li>
+    </ul>
+  </div>
+
+  <div class="audit-category">
+    <h4>R&amp;D &amp; Bioequivalence Facilities (Onsite)</h4>
+    <ul class="audit-list">
+      <li>Sidmak Labs, Valsad, India — GCP/GLP (Apr 2015)</li>
+      <li>Vimta Labs, Hyderabad, India — GCP/GLP (Jul 2015)</li>
+      <li>Macleods Pharmaceuticals Ltd R&amp;D Centre, Mumbai — GCP/GLP (Apr 2014)</li>
+    </ul>
+  </div>
+
+  <div class="audit-category">
+    <h4>ISO 9001:2015 QMS Audits</h4>
+    <ul class="audit-list">
+      <li>Condot Systems Pvt. Ltd., Mumbai, India (Nov 2017)</li>
+      <li>Accubits Technologies, Kerala, India (Aug 2022)</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">IT GxP Vendor Audits (Remote)</div>
+  <p style="font-size:9.5pt;margin-bottom:8px;">Comprehensive remote GxP vendor audits covering regulatory compliance, data integrity, SDLC, infrastructure controls, and audit trail integrity:</p>
+  <ul class="vendor-grid">
+    <li>Veeva Systems Inc. (Mar 2023)</li>
+    <li>Honeywell (Feb 2023)</li>
+    <li>ServiceNow (Nov–Dec 2019)</li>
+    <li>Microsoft SharePoint (Sep 2019)</li>
+    <li>Microsoft GitHub (Sep 2019)</li>
+    <li>Google Apigee (Dec 2021)</li>
+    <li>ValGenesis (Nov 2021)</li>
+    <li>Siemens Automation (Dec 2021)</li>
+    <li>Rockwell Automation (Dec 2021)</li>
+    <li>Biovia (Jan 2022)</li>
+    <li>Benchling (Dec 2021)</li>
+    <li>Signant Health (Feb 2023)</li>
+    <li>Kneat Solutions (Oct 2022)</li>
+    <li>Loftware Inc. (Aug 2022)</li>
+    <li>Dassault Systèmes (Dec 2021)</li>
+  </ul>
+  <p style="font-size:9pt;margin-top:8px;color:#555;"><strong>Data Centre:</strong> Celgene–BMS Data Centre Audit &amp; Gap Assessment (Mar 2021)</p>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">Regulatory Inspection Representation</div>
+  <div class="comp-grid">
+    <div class="comp-item"><strong>USFDA Inspection:</strong> Sidmak Labs, Dehradun — March 2017 (Clean outcome)</div>
+    <div class="comp-item"><strong>WHO Inspection:</strong> Sidmak Labs, Dehradun — July 2017 (Clean outcome)</div>
+    <div class="comp-item"><strong>Ukrainian GMP Inspection:</strong> Wallace Pharma, Nalagarh — August 2016</div>
+    <div class="comp-item"><strong>Role:</strong> Company Management Representative / CSV Management Representative</div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">Audit Experience by Role</div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">Lead Auditor / GxP Audit SME</span><span class="job-date">May 2021 – Sep 2024</span></div>
+    <div class="job-company">Orion Innovation (US pharmaceutical client)</div>
+    <ul>
+      <li>Lead IT GxP vendor audit programme — scheduling, conducting, reporting, and CAPA tracking for 15+ global vendors.</li>
+      <li>Prepared risk-ranked audit reports with clear findings and management-ready summaries.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">Manager — CSV &amp; Compliance / Regulatory Representative</span><span class="job-date">Feb 2017 – Nov 2017</span></div>
+    <div class="job-company">Sidmak Laboratories (India) Pvt. Ltd.</div>
+    <ul>
+      <li>Represented management during USFDA and WHO inspections; ensured all validation documentation was inspection-ready.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">CSV Auditor / Assistant Manager Projects</span><span class="job-date">Jan 2013 – Nov 2016</span></div>
+    <div class="job-company">Anthem GxP Solutions Pvt. Ltd.</div>
+    <ul>
+      <li>Conducted GxP, GMP, GLP audits across API, injectable, formulation, and R&amp;D facilities across India and internationally.</li>
+      <li>Delivered pre-audit gap assessments and compiled structured audit reports with prioritised CAPA recommendations.</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">Certification &amp; Regulatory Frameworks</div>
+  <div class="two-col">
+    <div>
+      <div class="edu-row"><span class="edu-left"><strong>ASQ Certified Quality Auditor (CQA)</strong></span><span class="edu-right">Feb 2022</span></div>
+      <div class="edu-row"><span class="edu-left">Certified Industrial Automation Engineer</span><span class="edu-right">Dec 2012</span></div>
+      <div class="edu-row"><span class="edu-left">B.Tech — Electronics &amp; Communication Engineering</span><span class="edu-right">Rajasthan Technical University</span></div>
+    </div>
+    <div>
+      <div class="tags">
+        <span class="tag">GAMP 5</span><span class="tag">21 CFR Part 11</span><span class="tag">21 CFR 210/211</span>
+        <span class="tag">EU GMP Annex 11</span><span class="tag">ICH E6</span><span class="tag">ALCOA+</span>
+        <span class="tag">ICH Q9</span><span class="tag">21 CFR 58</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cv-footer">Kushal Vyas &nbsp;|&nbsp; Cork, Ireland &nbsp;|&nbsp; vyas_kushal@hotmail.com &nbsp;|&nbsp; References available upon request</div>
+</div>
+</body>
+</html>

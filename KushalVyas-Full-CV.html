@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kushal Vyas — Full CV</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; font-size: 10.5pt; color: #1a1a1a; background: #fff; }
+.page { max-width: 780px; margin: 0 auto; padding: 36px 44px; }
+
+/* Header */
+.cv-header { background: #0B1F3A; color: #fff; padding: 28px 44px 22px; display: flex; justify-content: space-between; align-items: flex-end; }
+.cv-header-left h1 { font-size: 26pt; font-weight: normal; letter-spacing: 0.02em; color: #fff; }
+.cv-header-left h2 { font-size: 10pt; color: #C9A84C; font-style: italic; font-weight: normal; margin-top: 4px; letter-spacing: 0.04em; }
+.cv-header-right { text-align: right; font-size: 9pt; color: #c8d4e0; line-height: 1.7; }
+.cv-header-right a { color: #C9A84C; text-decoration: none; }
+
+/* CV type badge */
+.cv-type-badge { background: #C9A84C; color: #0B1F3A; font-size: 8pt; font-weight: bold; padding: 3px 10px; border-radius: 2px; display: inline-block; margin-top: 8px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Sections */
+.section { margin: 22px 0; }
+.section-title { font-size: 9pt; font-weight: bold; letter-spacing: 0.12em; text-transform: uppercase; color: #C9A84C; border-bottom: 1.5px solid #C9A84C; padding-bottom: 4px; margin-bottom: 12px; }
+
+/* Profile summary */
+.profile-box { background: #f8f6f1; border-left: 3px solid #C9A84C; padding: 14px 16px; font-size: 10pt; line-height: 1.65; color: #1a1a1a; font-style: italic; }
+
+/* Competencies grid */
+.comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; margin-top: 8px; }
+.comp-item { font-size: 9.5pt; padding: 4px 0 4px 12px; border-left: 2px solid #C9A84C; line-height: 1.4; }
+.comp-item strong { color: #0B1F3A; }
+
+/* Experience block */
+.job { margin-bottom: 18px; }
+.job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+.job-title { font-size: 11pt; font-weight: bold; color: #0B1F3A; }
+.job-date { font-size: 9pt; color: #666; white-space: nowrap; margin-left: 12px; }
+.job-company { font-size: 10pt; color: #C9A84C; font-weight: bold; margin-bottom: 6px; }
+.job ul { padding-left: 16px; }
+.job li { font-size: 9.5pt; line-height: 1.6; margin-bottom: 2px; }
+
+/* Audit tables */
+.audit-category { margin-bottom: 14px; }
+.audit-category h4 { font-size: 9.5pt; font-weight: bold; color: #0B1F3A; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.05em; }
+.audit-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 16px; }
+.audit-list li { font-size: 9pt; line-height: 1.55; list-style: none; padding-left: 10px; position: relative; }
+.audit-list li::before { content: '—'; position: absolute; left: 0; color: #C9A84C; }
+
+/* IT vendor list */
+.vendor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 16px; }
+.vendor-grid li { font-size: 9pt; list-style: none; padding-left: 10px; position: relative; line-height: 1.6; }
+.vendor-grid li::before { content: '→'; position: absolute; left: 0; color: #C9A84C; font-size: 8pt; }
+
+/* Skills tags */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.tag { background: #0B1F3A; color: #C9A84C; font-size: 8pt; padding: 3px 9px; border-radius: 2px; letter-spacing: 0.04em; }
+
+/* Edu / cert table */
+.edu-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #eee; font-size: 9.5pt; }
+.edu-row:last-child { border-bottom: none; }
+.edu-left { color: #1a1a1a; }
+.edu-right { color: #666; font-size: 9pt; }
+
+/* Divider */
+.divider { border: none; border-top: 1px solid #e8e0d0; margin: 14px 0; }
+
+/* Two column layout */
+.two-col { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+.sidebar .section-title { font-size: 8.5pt; }
+
+/* Footer */
+.cv-footer { margin-top: 28px; padding-top: 10px; border-top: 1px solid #e8e0d0; font-size: 8pt; color: #999; text-align: center; }
+
+@media print {
+  body { font-size: 10pt; }
+  .page { padding: 0; max-width: 100%; }
+  .cv-header { padding: 22px 30px 18px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cv-header">
+  <div class="cv-header-left">
+    <h1>Kushal Vyas</h1>
+    <h2>ASQ-CQA | GxP Audit &amp; CSV Specialist | Life Science Compliance</h2>
+    <span class="cv-type-badge">Full CV — All Experience</span>
+  </div>
+  <div class="cv-header-right">
+    Cork, Ireland<br>
+    +353 89970 4265<br>
+    <a href="mailto:vyas_kushal@hotmail.com">vyas_kushal@hotmail.com</a><br>
+    <a href="https://linkedin.com/in/kushal-vyas-csv">linkedin.com/in/kushal-vyas-csv</a><br>
+    <a href="https://kushal-vyas.github.io">kushal-vyas.github.io</a>
+    
+  </div>
+</div>
+
+<div class="page">
+
+<div class="section">
+  <div class="section-title">Professional Profile</div>
+  <div class="profile-box">
+    "Is the data real — and will a regulator trust it?" For over 13 years I've worked in the space where that question must be answered with evidence, not opinions. As an ASQ-Certified Quality Auditor (CQA), I operate at the intersection of industrial automation, IT systems, and global regulation — translating PLC/SCADA, ERP, LIMS, and infrastructure realities into language regulators trust. I have supported and led successful USFDA and WHO inspections, turning potential findings into clean audit outcomes across the EU, US, India, APAC, and MENA.
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Core Competencies</div>
+  <div class="comp-grid">
+    <div class="comp-item"><strong>GxP Audits:</strong> GMP, GLP, GCP — onsite &amp; remote</div>
+    <div class="comp-item"><strong>Computer System Validation (CSV/CSA):</strong> GAMP 5, 21 CFR Part 11, Annex 11</div>
+    <div class="comp-item"><strong>IT QA &amp; Vendor Compliance:</strong> GxP vendor audits, SDLC oversight</div>
+    <div class="comp-item"><strong>Technical Writing:</strong> SOPs, policies, validation plans, audit reports</div>
+    <div class="comp-item"><strong>PLC/SCADA/BMS/EMS Validation:</strong> Industrial automation systems</div>
+    <div class="comp-item"><strong>Data Integrity &amp; ALCOA+:</strong> Assessment, gap analysis, remediation</div>
+    <div class="comp-item"><strong>ERP/SAP/QMS/LIMS:</strong> Qualification and compliance oversight</div>
+    <div class="comp-item"><strong>Regulatory Inspections:</strong> USFDA, WHO, EU GMP, Ukrainian GMP</div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">Professional Experience</div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">Freelance Senior Consultant — CSV Lead</span><span class="job-date">June 2023 – Present</span></div>
+    <div class="job-company">Eli Lilly Kinsale Limited, Cork, Ireland</div>
+    <ul>
+      <li>Manage CSV lifecycle for laboratory software systems at a global biologics manufacturing site.</li>
+      <li>Conduct IT Data Integrity pre-purchase assessments and prepare detailed compliance reports.</li>
+      <li>Develop and review validation plans, test scripts, and summary reports aligned to 21 CFR Part 11 and Annex 11.</li>
+      <li>Collaborate with IT, QA, and regulatory teams to align CSV activities with project objectives.</li>
+      <li>Maintain validation documentation for readiness during internal and external audits.</li>
+      <li>Drive continuous improvement based on audit findings and evolving CSA best practices.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">Lead Auditor / CSV SME</span><span class="job-date">May 2021 – Sep 2024</span></div>
+    <div class="job-company">Orion Innovation (supporting major US-based pharmaceutical client)</div>
+    <ul>
+      <li>Conducted IT GxP vendor audits for 15+ global technology providers including Veeva, ServiceNow, Rockwell Automation, Siemens, Biovia, and ValGenesis.</li>
+      <li>Scheduled, performed, and reported onsite and remote audits; assigned and tracked action items to closure.</li>
+      <li>Managed Trackwise QMS transition and conducted system qualifications for BMS, lab equipment, PLC, HMI, and SCADA.</li>
+      <li>Developed cybersecurity and IT infrastructure policies in compliance with NIST and COBIT standards (KKNA engagement).</li>
+      <li>Performed Celgene–BMS Data Centre Audit and Gap Assessment (March 2021).</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">IT QA / Compliance SME (Lead Specialist)</span><span class="job-date">Jan 2018 – Apr 2021</span></div>
+    <div class="job-company">Accenture / Celgene–BMS (Bristol-Myers Squibb), USA</div>
+    <ul>
+      <li>Oversaw global computer systems' quality and compliance throughout their full lifecycle within BMS IT QA department.</li>
+      <li>Approved GxP Change Requests, validation deliverables, Disaster Recovery plans, and IT policies.</li>
+      <li>Performed vendor assessments, periodic reviews, and compliance documentation management.</li>
+      <li>Led failure investigations, implemented CAPA, and tracked KPIs for monthly management reporting.</li>
+      <li>Served as technical writer for Data Centre retrospective validation.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">Manager — Computer System Validation</span><span class="job-date">Feb 2017 – Nov 2017</span></div>
+    <div class="job-company">Sidmak Laboratories (India) Pvt. Ltd., Dehradun Plant</div>
+    <ul>
+      <li>Reported to President–Corporate Quality, overseeing validation and compliance of all computerised systems.</li>
+      <li>Served as Management Representative during USFDA (March 2017) and WHO (July 2017) inspections — both clean outcomes.</li>
+      <li>Managed CSV projects, reviewed and approved all CSV documents, led serialisation implementation.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">Senior Analyst — Regulatory Compliance &amp; CSV</span><span class="job-date">Nov 2016 – Feb 2017</span></div>
+    <div class="job-company">Accenture / Astellas Pharma (SAP Implementation, Europe)</div>
+    <ul>
+      <li>Planned and managed CSV projects for SAP installations across European pharma sites.</li>
+      <li>Reviewed CSV documents (URS, FS, DS, SRS, HLDS, VMP, IQ, OQ, PQ, FRA, IOQ, GxP Assessment, RAP).</li>
+      <li>Managed CAPA programme for compliance findings.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">Assistant Manager Projects — Validation &amp; Audits</span><span class="job-date">Jan 2013 – Nov 2016</span></div>
+    <div class="job-company">Anthem GxP Solutions Pvt. Ltd. (formerly Epitome Technologies), India</div>
+    <ul>
+      <li>Managed and executed onsite CSV projects across 20+ pharmaceutical and life-science clients in India and internationally.</li>
+      <li>Validated PLC, SCADA/MCC, EMS, BMS, Lab Equipment, Fire Alarm, Access Control, ERP, SAP, and Serialisation systems.</li>
+      <li>Led international projects in Bangladesh, UAE, Vietnam, and Oman; domestic projects across India.</li>
+      <li>Conducted GxP, GMP, GLP audits across API, formulation, injectable, R&amp;D, and bioequivalence facilities.</li>
+      <li>Delivered training and seminars on GxP audit, CSV, Data Integrity, and GAMP-5.</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">Audit Record Summary</div>
+  <div class="comp-grid">
+    <div class="comp-item"><strong>Manufacturing Sites Audited:</strong> 30+ (API, formulation, injectable, R&D)</div>
+    <div class="comp-item"><strong>IT/GxP Vendor Audits:</strong> 15+ (remote, global technology providers)</div>
+    <div class="comp-item"><strong>Regulatory Inspections Supported:</strong> USFDA, WHO, Ukrainian GMP</div>
+    <div class="comp-item"><strong>ISO 9001:2015 Audits:</strong> 2 (QMS certification support)</div>
+    <div class="comp-item"><strong>Geographies:</strong> EU, USA, India, APAC, MENA</div>
+    <div class="comp-item"><strong>Total Clients Served:</strong> 50+</div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">Certifications &amp; Regulatory Knowledge</div>
+  <div class="two-col">
+    <div>
+      <div class="edu-row"><span class="edu-left">ASQ Certified Quality Auditor (CQA)</span><span class="edu-right">Feb 2022</span></div>
+      <div class="edu-row"><span class="edu-left">Certified Industrial Automation Engineer (PLC, SCADA, HMI, DCS)</span><span class="edu-right">Dec 2012</span></div>
+      <div class="edu-row"><span class="edu-left">CCNA — Computer Networking (Academic)</span><span class="edu-right">Dec 2011</span></div>
+      <div class="edu-row"><span class="edu-left">ISCA CISA</span><span class="edu-right">In Progress</span></div>
+    </div>
+    <div>
+      <div class="tags">
+        <span class="tag">GAMP 5</span><span class="tag">21 CFR Part 11</span><span class="tag">21 CFR 210/211/212/58</span>
+        <span class="tag">EU GMP Annex 11</span><span class="tag">ICH E6 &amp; Q9</span><span class="tag">ALCOA+</span>
+        <span class="tag">NIST CSF</span><span class="tag">COBIT</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Education</div>
+  <div class="edu-row"><span class="edu-left">B.Tech — Electronics &amp; Communication Engineering</span><span class="edu-right">Rajasthan Technical University, Kota · 2009–2012</span></div>
+  <div class="edu-row"><span class="edu-left">Diploma — Electronics &amp; Communication Engineering</span><span class="edu-right">Gujarat State Technical Examination Board · 2006–2009</span></div>
+</div>
+
+<div class="section">
+  <div class="section-title">Languages</div>
+  <div class="tags">
+    <span class="tag">English — Full Professional</span>
+    <span class="tag">Hindi — Native</span>
+    <span class="tag">Gujarati — Native</span>
+  </div>
+</div>
+
+<div class="cv-footer">Kushal Vyas &nbsp;|&nbsp; Cork, Ireland &nbsp;|&nbsp; vyas_kushal@hotmail.com &nbsp;|&nbsp; References available upon request</div>
+</div>
+</body>
+</html>

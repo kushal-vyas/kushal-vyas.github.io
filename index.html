@@ -432,7 +432,109 @@ footer { padding: 18px 0 40px; color: var(--muted); font-size: .94rem; }
       scroll-margin-top: 110px;
     }
 
-  </style>
+  
+
+    .cv-download-section {
+      padding: 72px 0;
+      background: #f5f8fc;
+    }
+
+    .cv-download-card {
+      background: #ffffff;
+      border: 1px solid #d9e2ec;
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(23, 63, 109, 0.08);
+    }
+
+    .cv-download-copy h2 {
+      margin: 8px 0 12px;
+      color: #173f6d;
+    }
+
+    .cv-download-copy p {
+      margin-bottom: 24px;
+      color: #425466;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #173f6d;
+    }
+
+    .cv-request-form .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-field label {
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #173f6d;
+    }
+
+    .form-field input,
+    .form-field select {
+      padding: 14px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 15px;
+      color: #1f2937;
+      background: #ffffff;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus {
+      outline: none;
+      border-color: #173f6d;
+      box-shadow: 0 0 0 3px rgba(23, 63, 109, 0.12);
+    }
+
+    .cv-submit-btn {
+      display: inline-block;
+      background: #173f6d;
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      padding: 14px 22px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .cv-submit-btn:hover {
+      background: #123357;
+    }
+
+    .form-note,
+    .form-message {
+      margin-top: 14px;
+      color: #5b6b7c;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .cv-request-form .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cv-download-card {
+        padding: 22px;
+      }
+    }
+
+</style>
 </head>
 <body>
   <header class="topbar" id="top">
@@ -877,12 +979,64 @@ footer { padding: 18px 0 40px; color: var(--muted); font-size: .94rem; }
           </div>
           <button class="download-btn" type="submit">Download PDF Guide</button>
         </form>
-        <p class="download-note">The PDF will open automatically as soon as you submit the form. You'll also receive occasional audit-readiness insights.</p>
+        <p class="download-note">The selected HTML CV will open automatically as soon as you submit the form.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact">
+  
+  <section id="cv-download" class="cv-download-section">
+    <div class="container">
+      <div class="cv-download-card">
+        <div class="cv-download-copy">
+          <span class="section-eyebrow">CV Access</span>
+          <h2>Request and open a CV</h2>
+          <p>Select the CV area you want to view. After submitting the form, the selected HTML CV will open automatically in a new tab.</p>
+        </div>
+
+        <form id="cvRequestForm" class="cv-request-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="cvName">Full name</label>
+              <input type="text" id="cvName" name="name" placeholder="Your full name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="cvEmail">Work email</label>
+              <input type="email" id="cvEmail" name="email" placeholder="name@company.com" required>
+            </div>
+
+            <div class="form-field">
+              <label for="cvCompany">Company</label>
+              <input type="text" id="cvCompany" name="company" placeholder="Company name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="cvType">Select CV</label>
+              <select id="cvType" name="cv_type" required>
+                <option value="">Choose CV type</option>
+                <option value="KushalVyas-Full-CV.html">Full CV</option>
+                <option value="KushalVyas-Audit-CV.html">Audit CV</option>
+                <option value="KushalVyas-Validation-CV.html">Validation CV</option>
+                <option value="KushalVyas-ITQA-CV.html">IT QA CV</option>
+              </select>
+            </div>
+          </div>
+
+          <input type="hidden" name="_subject" value="New CV request from website">
+          <input type="hidden" name="source" value="personal website cv request">
+
+          <button type="submit" class="cv-submit-btn">Submit &amp; Open CV</button>
+
+          <p class="form-note">After form submission, the selected HTML CV will open in a new tab.</p>
+          <p id="cvFormMessage" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+<section id="contact">
     <div class="wrap">
       <div class="contact">
         <h2 style="margin-top:0;">Contact</h2>
@@ -989,6 +1143,45 @@ footer { padding: 18px 0 40px; color: var(--muted); font-size: .94rem; }
       }
     });
   </script>
+
+
+<script>
+  const cvForm = document.getElementById('cvRequestForm');
+  const cvType = document.getElementById('cvType');
+  const cvFormMessage = document.getElementById('cvFormMessage');
+
+  if (cvForm) {
+    cvForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const selectedCv = cvType.value;
+      if (!selectedCv) {
+        cvFormMessage.textContent = 'Please select a CV type.';
+        return;
+      }
+
+      const formData = new FormData(cvForm);
+
+      try {
+        const response = await fetch(cvForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          cvFormMessage.textContent = 'Thank you. Opening selected CV...';
+          window.open(selectedCv, '_blank');
+          cvForm.reset();
+        } else {
+          cvFormMessage.textContent = 'Form submission failed. Please try again.';
+        }
+      } catch (error) {
+        cvFormMessage.textContent = 'Network error. Please try again.';
+      }
+    });
+  }
+</script>
 
 </body>
 </html>

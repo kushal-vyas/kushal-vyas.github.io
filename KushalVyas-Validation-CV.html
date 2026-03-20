@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kushal Vyas — Validation CV</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Georgia', serif; font-size: 10.5pt; color: #1a1a1a; background: #fff; }
+.page { max-width: 780px; margin: 0 auto; padding: 36px 44px; }
+
+/* Header */
+.cv-header { background: #0B1F3A; color: #fff; padding: 28px 44px 22px; display: flex; justify-content: space-between; align-items: flex-end; }
+.cv-header-left h1 { font-size: 26pt; font-weight: normal; letter-spacing: 0.02em; color: #fff; }
+.cv-header-left h2 { font-size: 10pt; color: #C9A84C; font-style: italic; font-weight: normal; margin-top: 4px; letter-spacing: 0.04em; }
+.cv-header-right { text-align: right; font-size: 9pt; color: #c8d4e0; line-height: 1.7; }
+.cv-header-right a { color: #C9A84C; text-decoration: none; }
+
+/* CV type badge */
+.cv-type-badge { background: #C9A84C; color: #0B1F3A; font-size: 8pt; font-weight: bold; padding: 3px 10px; border-radius: 2px; display: inline-block; margin-top: 8px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Sections */
+.section { margin: 22px 0; }
+.section-title { font-size: 9pt; font-weight: bold; letter-spacing: 0.12em; text-transform: uppercase; color: #C9A84C; border-bottom: 1.5px solid #C9A84C; padding-bottom: 4px; margin-bottom: 12px; }
+
+/* Profile summary */
+.profile-box { background: #f8f6f1; border-left: 3px solid #C9A84C; padding: 14px 16px; font-size: 10pt; line-height: 1.65; color: #1a1a1a; font-style: italic; }
+
+/* Competencies grid */
+.comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; margin-top: 8px; }
+.comp-item { font-size: 9.5pt; padding: 4px 0 4px 12px; border-left: 2px solid #C9A84C; line-height: 1.4; }
+.comp-item strong { color: #0B1F3A; }
+
+/* Experience block */
+.job { margin-bottom: 18px; }
+.job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+.job-title { font-size: 11pt; font-weight: bold; color: #0B1F3A; }
+.job-date { font-size: 9pt; color: #666; white-space: nowrap; margin-left: 12px; }
+.job-company { font-size: 10pt; color: #C9A84C; font-weight: bold; margin-bottom: 6px; }
+.job ul { padding-left: 16px; }
+.job li { font-size: 9.5pt; line-height: 1.6; margin-bottom: 2px; }
+
+/* Audit tables */
+.audit-category { margin-bottom: 14px; }
+.audit-category h4 { font-size: 9.5pt; font-weight: bold; color: #0B1F3A; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.05em; }
+.audit-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 16px; }
+.audit-list li { font-size: 9pt; line-height: 1.55; list-style: none; padding-left: 10px; position: relative; }
+.audit-list li::before { content: '—'; position: absolute; left: 0; color: #C9A84C; }
+
+/* IT vendor list */
+.vendor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 16px; }
+.vendor-grid li { font-size: 9pt; list-style: none; padding-left: 10px; position: relative; line-height: 1.6; }
+.vendor-grid li::before { content: '→'; position: absolute; left: 0; color: #C9A84C; font-size: 8pt; }
+
+/* Skills tags */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.tag { background: #0B1F3A; color: #C9A84C; font-size: 8pt; padding: 3px 9px; border-radius: 2px; letter-spacing: 0.04em; }
+
+/* Edu / cert table */
+.edu-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #eee; font-size: 9.5pt; }
+.edu-row:last-child { border-bottom: none; }
+.edu-left { color: #1a1a1a; }
+.edu-right { color: #666; font-size: 9pt; }
+
+/* Divider */
+.divider { border: none; border-top: 1px solid #e8e0d0; margin: 14px 0; }
+
+/* Two column layout */
+.two-col { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+.sidebar .section-title { font-size: 8.5pt; }
+
+/* Footer */
+.cv-footer { margin-top: 28px; padding-top: 10px; border-top: 1px solid #e8e0d0; font-size: 8pt; color: #999; text-align: center; }
+
+@media print {
+  body { font-size: 10pt; }
+  .page { padding: 0; max-width: 100%; }
+  .cv-header { padding: 22px 30px 18px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cv-header">
+  <div class="cv-header-left">
+    <h1>Kushal Vyas</h1>
+    <h2>ASQ-CQA | GxP Audit &amp; CSV Specialist | Life Science Compliance</h2>
+    <span class="cv-type-badge">Validation CV — CSV / PLC / ERP / Lab / BMS / EMS</span>
+  </div>
+  <div class="cv-header-right">
+    Cork, Ireland<br>
+    +353 89970 4265<br>
+    <a href="mailto:vyas_kushal@hotmail.com">vyas_kushal@hotmail.com</a><br>
+    <a href="https://linkedin.com/in/kushal-vyas-csv">linkedin.com/in/kushal-vyas-csv</a><br>
+    <a href="https://kushal-vyas.github.io">kushal-vyas.github.io</a>
+    
+  </div>
+</div>
+
+<div class="page">
+
+<div class="section">
+  <div class="section-title">Validation Profile</div>
+  <div class="profile-box">
+    Computer System Validation specialist with 13+ years delivering CSV and qualification projects across PLC/SCADA, ERP/SAP, BMS, EMS, LIMS, laboratory instruments, and IT infrastructure. Managed validation programmes at global pharmaceutical manufacturing sites, a major US-based biopharma (Celgene–BMS), and an EU biologics manufacturer (Eli Lilly Kinsale). Expert in GAMP 5 risk-based approach, 21 CFR Part 11, EU GMP Annex 11, and modern Computer Software Assurance (CSA). Led USFDA and WHO inspection-ready validation programmes with clean outcomes.
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">Validation Competencies</div>
+  <div class="comp-grid">
+    <div class="comp-item"><strong>PLC/SCADA/HMI/DCS:</strong> IQ, OQ, PQ, revalidation, retrospective validation</div>
+    <div class="comp-item"><strong>BMS/EMS/MCC:</strong> Building management, environmental monitoring, manufacturing compliance console</div>
+    <div class="comp-item"><strong>Laboratory Systems:</strong> LIMS, instruments, software — pre-purchase to retirement</div>
+    <div class="comp-item"><strong>ERP/SAP:</strong> SAP B1, SAP ERP (EU), QMS, DMS, serialisation systems</div>
+    <div class="comp-item"><strong>IT Infrastructure:</strong> Server migration, data centre qualification, DR validation</div>
+    <div class="comp-item"><strong>CSV Documentation:</strong> URS, FS, DS, VMP, FRA, RAP, IQ, OQ, PQ, IOQ</div>
+    <div class="comp-item"><strong>Data Integrity:</strong> Pre-purchase DI assessments, ALCOA+, audit trail review</div>
+    <div class="comp-item"><strong>CAPA &amp; Change Control:</strong> GxP CR approval, deviation management, periodic reviews</div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">Systems Validated — by Technology Type</div>
+
+  <div class="audit-category">
+    <h4>PLC / SCADA / HMI / Automation</h4>
+    <ul class="audit-list">
+      <li>Promed Exports (Sentiss Pharma), Baddi — PLC Validation (Jan–Mar 2013)</li>
+      <li>Claris Life Sciences Ltd, Ahmedabad — PLC validation, Plants CL-1 to CL-5 (Mar–Aug 2013)</li>
+      <li>Famycare, Ahmedabad — PLC revalidation (Sep 2013)</li>
+      <li>VVC Pharma, Ratnagiri — PLC retrospective validation (Sep 2013)</li>
+      <li>Agila Specialties Pvt Ltd (Mylan Group), Bangalore — SCADA-based MCC validation, 5 plants (Oct 2013–Feb 2014)</li>
+      <li>Biological E Ltd, Hyderabad — PLC validation for 39 vaccine manufacturing machines (Feb–May 2014)</li>
+      <li>Life Pharma FZE, Dubai, UAE — PLC qualification (Mar–Apr 2015)</li>
+      <li>Oman Pharmaceuticals Products CO. LLC, Salalah, Oman — PLC qualification (Jan–Apr 2016)</li>
+      <li>Alembic Pharmaceuticals, Vadodara — PLC validation (Feb–Apr 2016)</li>
+    </ul>
+  </div>
+
+  <div class="audit-category">
+    <h4>BMS / EMS / Fire Alarm / Access Control</h4>
+    <ul class="audit-list">
+      <li>Vimta Labs, Hyderabad — BMS, Fire Alarm, Access Control qualification (Jun–Jul 2014)</li>
+      <li>PHIL Inter Pharma, Vietnam — BMS qualification (Aug–Dec 2015)</li>
+      <li>Orion Innovation / US pharma client — BMS qualification (2021–2023)</li>
+    </ul>
+  </div>
+
+  <div class="audit-category">
+    <h4>Laboratory Systems &amp; Instruments</h4>
+    <ul class="audit-list">
+      <li>Eli Lilly Kinsale — laboratory software CSV (ongoing, 2023–present)</li>
+      <li>Square Pharmaceuticals, Bangladesh — lab equipment qualification (Dec 2014–Jan 2015)</li>
+      <li>Orion Innovation — laboratory equipment and software qualification (2021–2023)</li>
+      <li>Alembic Pharmaceuticals — laboratory equipment qualification (Feb–Apr 2016)</li>
+    </ul>
+  </div>
+
+  <div class="audit-category">
+    <h4>ERP / SAP / QMS / DMS / Serialisation</h4>
+    <ul class="audit-list">
+      <li>Indoco Remedies Ltd, Goa — ERP qualification (Nov 2014)</li>
+      <li>Kopran Limited, Khopoli — SAP B1 validation (Nov 2015)</li>
+      <li>Aurobindo Pharma Ltd, Hyderabad — QMS software validation (Dec 2015–Jan 2016)</li>
+      <li>Alembic Pharmaceuticals — SAP validation (Feb–Apr 2016)</li>
+      <li>PHIL Inter Pharma, Vietnam — ERP qualification (Aug–Dec 2015)</li>
+      <li>Sidmak Laboratories — serialisation implementation &amp; validation (2017)</li>
+      <li>Condot Systems Pvt. Ltd. — serialisation documentation (2017)</li>
+      <li>Astellas Pharma / Accenture — SAP CSV project management, Europe (Nov 2016–Feb 2017)</li>
+    </ul>
+  </div>
+
+  <div class="audit-category">
+    <h4>IT Infrastructure / Server Migration / Data Centre</h4>
+    <ul class="audit-list">
+      <li>Indoco Remedies Ltd, Mumbai — server migration qualification (Nov 2014)</li>
+      <li>Celgene–BMS — Data Centre retrospective validation &amp; technical writing (2018–2021)</li>
+      <li>Celgene–BMS Data Centre Audit &amp; Gap Assessment (Mar 2021)</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">Professional Experience — CSV Focus</div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">Freelance Senior Consultant — CSV Lead</span><span class="job-date">June 2023 – Present</span></div>
+    <div class="job-company">Eli Lilly Kinsale Limited, Cork, Ireland</div>
+    <ul>
+      <li>Manage full CSV lifecycle for laboratory software at a global biologics manufacturing site.</li>
+      <li>Conduct IT Data Integrity pre-purchase assessments; prepare detailed DI compliance reports.</li>
+      <li>Develop and review validation plans, test scripts, and summary reports (21 CFR Part 11, Annex 11).</li>
+      <li>Collaborate with IT, QA, and regulatory teams; maintain documentation for audit readiness.</li>
+      <li>Apply CSA principles to modernise validation approach and reduce unnecessary documentation burden.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">IT CSV &amp; Life Science Compliance SME</span><span class="job-date">May 2021 – Sep 2024</span></div>
+    <div class="job-company">Orion Innovation (supporting US pharmaceutical client)</div>
+    <ul>
+      <li>Conducted system qualifications for BMS, laboratory equipment, software, PLC, HMI, and SCADA systems.</li>
+      <li>Managed Trackwise QMS system transition — validation planning through deployment.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">IT QA / Compliance SME (Lead Specialist)</span><span class="job-date">Jan 2018 – Apr 2021</span></div>
+    <div class="job-company">Accenture / Celgene–BMS (Bristol-Myers Squibb), USA</div>
+    <ul>
+      <li>Final reviewer and approver of all validation plans, summary reports, and requirements documents for validated systems.</li>
+      <li>Reviewed and approved Data Migration Plans, DR Plans and Reports, System Retirement Plans.</li>
+      <li>Approved all GxP Change Requests, ensuring controlled changes to validated systems.</li>
+      <li>Technical writer for Data Centre retrospective validation project.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">Manager — Computer System Validation</span><span class="job-date">Feb 2017 – Nov 2017</span></div>
+    <div class="job-company">Sidmak Laboratories (India) Pvt. Ltd.</div>
+    <ul>
+      <li>Oversaw validation and compliance of all computerised systems at Dehradun plant.</li>
+      <li>Managed CSV projects end-to-end; reviewed and approved all CSV documentation.</li>
+      <li>Led technology upgrades, serialisation implementation, and cross-departmental CSV training.</li>
+      <li>Prepared site for USFDA (March 2017) and WHO (July 2017) inspections — both clean outcomes.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-title">Assistant Manager Projects — Validation</span><span class="job-date">Jan 2013 – Nov 2016</span></div>
+    <div class="job-company">Anthem GxP Solutions Pvt. Ltd.</div>
+    <ul>
+      <li>Managed and executed 20+ onsite CSV projects across India and international sites (Bangladesh, UAE, Vietnam, Oman).</li>
+      <li>Validated PLC, SCADA/MCC, EMS, BMS, Lab Equipment, Fire Alarm, Access Control, ERP, SAP, and Serialisation systems.</li>
+      <li>Prepared validation master plans, FRA, RAP, IOQ protocols, and full documentation suites.</li>
+      <li>Delivered PLC execution and documentation training to junior team members.</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="section-title">Certifications, Frameworks &amp; Education</div>
+  <div class="two-col">
+    <div>
+      <div class="edu-row"><span class="edu-left"><strong>ASQ Certified Quality Auditor (CQA)</strong></span><span class="edu-right">Feb 2022</span></div>
+      <div class="edu-row"><span class="edu-left">Certified Industrial Automation Engineer (PLC, SCADA, HMI, DCS)</span><span class="edu-right">Dec 2012</span></div>
+      <div class="edu-row"><span class="edu-left">CCNA — Computer Networking (Academic)</span><span class="edu-right">Dec 2011</span></div>
+      <div class="edu-row"><span class="edu-left">B.Tech — Electronics &amp; Communication Engineering</span><span class="edu-right">Rajasthan Technical University</span></div>
+    </div>
+    <div>
+      <div class="tags">
+        <span class="tag">GAMP 5</span><span class="tag">21 CFR Part 11</span><span class="tag">EU GMP Annex 11</span>
+        <span class="tag">CSA / FDA Draft Guidance</span><span class="tag">ALCOA+</span><span class="tag">ICH Q9</span>
+        <span class="tag">21 CFR 210/211</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cv-footer">Kushal Vyas &nbsp;|&nbsp; Cork, Ireland &nbsp;|&nbsp; vyas_kushal@hotmail.com &nbsp;|&nbsp; References available upon request</div>
+</div>
+</body>
+</html>
